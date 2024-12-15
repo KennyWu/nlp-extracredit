@@ -10,7 +10,7 @@ export default function NavBar({}) {
           <NavLink to="/">
             <h2>Quiz</h2>
           </NavLink>
-          <NavLink to="https://wikitopics.github.io/wikitopics-code/">
+          <NavLink to="https://github.com/WikiTopics/wikitopics-code">
             <h2>Source Code</h2>
           </NavLink>
         </nav>

@@ -14,13 +14,15 @@
 nav a {
   text-decoration: none; /* Optional: Remove underline if needed */
   color: inherit; /* Inherit color from nav */
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 20%;
+  flex-grow: 1;
+  align-items: right;
+  justify-content: right;
   color: whitesmoke;
 }
 
@@ -31,6 +33,12 @@ nav {
   height: 70px;
   color: whitesmoke;
   border: solid;
+}
+
+@media (max-width: 671px) {
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
 }
 
 :root {
