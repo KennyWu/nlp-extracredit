@@ -5,7 +5,7 @@ export default function NavBar({}) {
   return (
     <div className="container">
       <div className="navbar">
-        <h1>WikiQuizzes</h1>
+        <h1>WikiTopics Quiz</h1>
         <nav>
           <NavLink to="/">
             <h2>Home</h2>
