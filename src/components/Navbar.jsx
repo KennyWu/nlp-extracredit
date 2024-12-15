@@ -8,10 +8,10 @@ export default function NavBar({}) {
         <h1>WikiTopics Quiz</h1>
         <nav>
           <NavLink to="/">
-            <h2>Home</h2>
+            <h2>Quiz</h2>
           </NavLink>
-          <NavLink to="quiz">
-            <h2>Take Quiz</h2>
+          <NavLink to="https://wikitopics.github.io/wikitopics-code/">
+            <h2>Source Code</h2>
           </NavLink>
         </nav>
       </div>

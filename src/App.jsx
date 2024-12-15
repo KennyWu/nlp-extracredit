@@ -9,8 +9,7 @@ function App() {
     <HashRouter>
       <NavBar />
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="quiz" element={<Quiz />} />
+        <Route index element={<Quiz />} />
       </Routes>
     </HashRouter>
   );
