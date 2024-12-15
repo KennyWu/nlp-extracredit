@@ -71,9 +71,15 @@ function shuffleArray(array) {
 }
 
 async function getData() {
-  let resp = await fetch("/topical_output.json");
+  let resp = await fetch("/topical_output.min.json", {
+    "Content-Encoding": 'gzip',
+    "Content-Type": 'application/json'
+  });
   let articles = await resp.json();
-  resp = await fetch("/topics.json");
+  resp = await fetch("/topics.min.json", {
+    "Content-Encoding": 'gzip',
+    "Content-Type": 'application/json'
+  });
   let topics = await resp.json();
   return [articles, topics];
 }

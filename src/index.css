@@ -9,3 +9,8 @@ body {
   --secondary-color: #abc4aa;
   --hover-color: #a9907e;
 }
+
+* {
+  font-family: system-ui, sans-serif;
+  font-weight: normal;
+}
