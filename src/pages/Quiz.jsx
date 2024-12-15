@@ -6,7 +6,7 @@ import "./quiz.css";
 export default function Quiz() {
   const [reset, setReset] = useState(-1);
   const [show, setShow] = useState(false);
-  const [correct, setCorrect] = useState(false);
+  const [selected, setSelected] = useState(null);
   const [isLoading, candidates, answer, dates] = useQuizInfo(reset);
   console.log(answer);
   const resetQuiz = () => {
@@ -16,12 +16,26 @@ export default function Quiz() {
 
   const updateAnswer = (value) => {
     if (answer == value) {
-      setCorrect(true);
+      setSelected(value);
     } else {
-      setCorrect(false);
+      setSelected(value);
     }
     setShow(true);
   };
+
+  const getCandidateClass = (ele) => {
+    if (!show) {
+      return "";
+    }
+    if (selected == ele[0]) {
+      return answer == ele[0] ? "correct-opt" : "wrong-opt";
+    } else if (answer == ele[0]) {
+      return "correct-opt";
+    }
+    return "";
+  }
+
+  const correct = selected == answer;
 
   return isLoading ? (
     <Box>Loading the Question...</Box>
@@ -35,7 +49,9 @@ export default function Quiz() {
         <div className="quiz-options">
           <ul>
             {candidates.map((ele, idx) => (
-              <li onClick={() => updateAnswer(ele[0])} key={idx}>
+              <li onClick={() => updateAnswer(ele[0])}
+                key={idx}
+                className={getCandidateClass(ele)}>
                 {ele[0]}
               </li>
             ))}
@@ -44,9 +60,9 @@ export default function Quiz() {
         <div className="displayResults">
           {show &&
             (correct ? (
-              <div className="correct">Correct!</div>
+              <div className="correct-msg">Correct!</div>
             ) : (
-              <div className="wrong">Wrong!</div>
+              <div className="wrong-msg">Wrong!</div>
             ))}
           <button onClick={resetQuiz}>Next Question</button>
         </div>

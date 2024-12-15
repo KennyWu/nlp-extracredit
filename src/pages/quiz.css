@@ -55,10 +55,20 @@
   margin-left: auto;
 }
 
-.correct {
+.correct-msg {
   color: green;
 }
 
-.wrong {
+.wrong-msg {
   color: red;
+}
+
+.correct-opt {
+  background-color: green;
+  color: white;
+}
+
+.wrong-opt {
+  background-color: darkred;
+  color: white;
 }
