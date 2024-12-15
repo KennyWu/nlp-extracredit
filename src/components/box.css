@@ -1,0 +1,8 @@
+.box {
+  margin: 3%;
+  padding: 10%;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

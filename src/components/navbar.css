@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.container .navbar {
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none; /* Optional: Remove underline if needed */
+  color: inherit; /* Inherit color from nav */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  color: whitesmoke;
+}
+
+.container {
+  background-color: var(--nav-color);
+  font-size: 1.2rem;
+  font-family: "Merriweather Sans", sans-serif;
+  height: 70px;
+  color: whitesmoke;
+  border: solid;
+}
+
+:root {
+  --nav-color: #675d50;
+  --nav-text: #fff;
+  --primary-color: #f3deba;
+  --secondary-color: #abc4aa;
+  --hover-color: #a9907e;
+}
