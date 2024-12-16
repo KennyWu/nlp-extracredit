@@ -8,7 +8,7 @@ export default function Quiz() {
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState(null);
   const [isLoading, candidates, answer, dates] = useQuizInfo(reset);
-  console.log(answer);
+  // console.log(answer);
   const resetQuiz = () => {
     setReset((reset) => -1 * reset);
     setShow(false);

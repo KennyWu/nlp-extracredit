@@ -1,6 +1,5 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Quiz from "./pages/Quiz.jsx";
-import Home from "./pages/Home.jsx";
 import NavBar from "./components/Navbar.jsx";
 import "./App.css";
 
